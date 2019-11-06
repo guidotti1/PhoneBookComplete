@@ -88,7 +88,7 @@ int main() {
     }
   }
 
-  if(operation=="Add Entry"){
+  if (operation == "Add Entry"){
     form_iterator afnameString = cgi.getElement("afname");
     form_iterator alnameString = cgi.getElement("alname");
     form_iterator addphoneString = cgi.getElement("aphone");
@@ -98,6 +98,7 @@ int main() {
     string addlname=**alnameString;
     string addphone=**addphoneString;
     string addtype=**addtypeString;
+    addtype = "Family";
 
     pb.addEntry(addfname,addlname,addphone,addtype);
     output="success";
