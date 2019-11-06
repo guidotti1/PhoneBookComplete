@@ -95,7 +95,6 @@ int main() {
     string addlname=**alnameString;
     string addphone=**addphoneString;
     string addtype=**addtypeString;
-    addtype = "Family";
 
     pb.addEntry(addfname,addlname,addphone,addtype);
     output="success";
@@ -109,8 +108,6 @@ int main() {
     output="success";
   }
   if(operation=="edit"){
-    form_iterator idtoeditString = cgi.getElement("editid");
-    string idedit=**idtoeditString;
 
     form_iterator editfnameString = cgi.getElement("editfname");
     form_iterator editlnameString = cgi.getElement("editlname");
@@ -123,7 +120,7 @@ int main() {
     string edittype=**edittypeString;
 
 
-    pb.editEntry(idedit,editfname,editlname,editphone,edittype);
+    pb.editEntry(editfname,editlname,editphone,edittype);
     output="success";
   }
   
