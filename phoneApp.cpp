@@ -43,8 +43,7 @@ int main() {
 	output += "," + pbResults.at(i).first + ","
 	  + pbResults.at(i).last + ","
 	  + pbResults.at(i).phone + ","
-	  + pbResults.at(i).type + ","
-	  + pbResults.at(i).ID;
+	  + pbResults.at(i).type + ",";
       }
     } else {
       output = "No Match Found";
@@ -62,8 +61,7 @@ int main() {
 	output += "," + pbResults.at(i).first + ","
 	  + pbResults.at(i).last + ","
 	  + pbResults.at(i).phone + ","
-	  + pbResults.at(i).type + ","
-	  + pbResults.at(i).ID;
+	  + pbResults.at(i).type + ",";
       }
     } else {
       output = "No Match Found";
@@ -80,8 +78,7 @@ int main() {
 	output += "," + pbResults.at(i).first + ","
 	  + pbResults.at(i).last + ","
 	  + pbResults.at(i).phone + ","
-	  + pbResults.at(i).type + ","
-	  + pbResults.at(i).ID;
+	  + pbResults.at(i).type + ",";
       }
     } else {
       output = "No Match Found";
