@@ -93,12 +93,11 @@ int main(){
     cout << "Enter an ID number to delete";
     cin >> IDnum;
     pb.deleteEntry(IDnum);
-    string ID = "1";
     string firstAdd = "polly";
     string lastAdd = "dog";
     string addPhone = "124125126";
     string addType = "Family";
-    pb.addEntry(ID, firstAdd, lastAdd, addPhone, addType);
+    pb.addEntry(firstAdd, lastAdd, addPhone, addType);
     cout << "Attempted add!";
     cout << "Attempted delete";
  
