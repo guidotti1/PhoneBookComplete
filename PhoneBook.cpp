@@ -84,7 +84,7 @@ void PhoneBook::addEntry(string first,string last,string phone, string type){
 }
 
 
-void PhoneBook::editEntry(string idnum,string first,string last,string phone, string type){
+void PhoneBook::editEntry(string first,string last,string phone, string type){
   sql::Driver* driver = sql::mysql::get_driver_instance();
   std::auto_ptr<sql::Connection> con(driver->connect(url, user, pass));
   con->setSchema(database);
