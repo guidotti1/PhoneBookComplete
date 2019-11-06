@@ -20,7 +20,7 @@
 
 #define HOST "localhost"
 #define USER "guidotti1"
-#define DB "PhoneAppDB"
+#define DB "guidotti1"
 #define PASS "S217026"
 
 using namespace std;
