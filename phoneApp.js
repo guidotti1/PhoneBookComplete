@@ -91,7 +91,7 @@ function editEntry(){
     console.log("Firstname:" + $('#editfirst').val() + "ID:" + editid);
     $('#searchresults').empty();
     $.ajax({
-	url: '/cgi-bin/skon_phoneAppComplete.cgi?editid='+editid +'&editfname='+$('#editfirst').val()+'&editlname='+$('#editlast').val()+'&editphone='+$('#editphone').val()+'&edittype='+$('#edittype').text()+'&operation=edit',
+	url: '/cgi-bin/guidotti1_phoneAppComplete.cgi?editid='+editid +'&editfname='+$('#editfirst').val()+'&editlname='+$('#editlast').val()+'&editphone='+$('#editphone').val()+'&edittype='+$('#edittype').text()+'&operation=edit',
 	dataType: 'text',
 	success: editDone(),
 	error: function(){alert("Error: Something went wrong");}
