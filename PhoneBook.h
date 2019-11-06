@@ -31,7 +31,7 @@ public:
     vector<PhoneEntry> findByFirst(string first);
     vector<PhoneEntry> findByLast(string last);
     vector<PhoneEntry> findByType(string type);
-    void addEntry(string id, string first,string last,string phone,string type);
+    void addEntry(string first,string last,string phone,string type);
     void editEntry(string idnum,string first,string last,string phone,string type);
     void deleteEntry(string idnum);
 private:
