@@ -89,7 +89,6 @@ int main(){
     cout << "Attempted to edit";
 
     */
-    pb.deleteEntry(IDnum);
     string firstAdd = "polly";
     string lastAdd = "dog";
     string addPhone = "124125126";
