@@ -102,7 +102,7 @@ function editEntry(){
 function processDelete(){
     console.log("Attempting to delete an entry");
     $('#searchresults').empty();
-    var id=$(this).attr('first');
+    var id=$(this).attr('.first');
     $.ajax({
 	url: '/cgi-bin/guidotti1_phoneAppComplete.cgi?deleteid='+id+'&operation=delete',
 	dataType: 'text',
