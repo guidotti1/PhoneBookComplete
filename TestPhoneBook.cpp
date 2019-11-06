@@ -89,9 +89,6 @@ int main(){
     cout << "Attempted to edit";
 
     */
-    string IDnum;
-    cout << "Enter an ID number to delete";
-    cin >> IDnum;
     pb.deleteEntry(IDnum);
     string firstAdd = "polly";
     string lastAdd = "dog";
@@ -99,7 +96,6 @@ int main(){
     string addType = "Family";
     pb.addEntry(firstAdd, lastAdd, addPhone, addType);
     cout << "Attempted add!";
-    cout << "Attempted delete";
  
 return 0;}
 
