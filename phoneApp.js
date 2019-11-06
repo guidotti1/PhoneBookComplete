@@ -104,7 +104,7 @@ function processDelete(){
     $('#searchresults').empty();
     var id=$(this).attr('ID');
     $.ajax({
-	url: '/cgi-bin/guidotti1_phoneAppComplete.cgi?deleteid='+$('#LastName!').val()+'&operation=delete',
+	url: '/cgi-bin/guidotti1_phoneAppComplete.cgi?deleteid='+$(".first").val()+'&operation=delete',
 	dataType: 'text',
 	success: function(){alert("Deleted Record: " +id );},
 	error: function(){alert("Error: Something went wrong");}
