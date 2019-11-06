@@ -92,15 +92,15 @@ void PhoneBook::editEntry(string idnum,string first,string last,string phone, st
   if(type != "Friend" && type != "Family" && type!="Business"){
     type="Other";
   }
-  stmt->execute("UPDATE Phonebook SET First = '"+first+"', Last ='"+last+"', Phone ='"+phone+"', Type ='"+type+"' WHERE ID='"+idnum+"'");
+  stmt->execute("UPDATE Phonebook SET First = '"+first+"', Last ='"+last+"', Phone ='"+phone+"', Type ='"+type+"' WHERE First='"+first+"'");
 }
 
 
-void PhoneBook::deleteEntry(string idnum){
+void PhoneBook::deleteEntry(string first){
   sql::Driver* driver = sql::mysql::get_driver_instance();
   std::auto_ptr<sql::Connection> con(driver->connect(url, user, pass));
   con->setSchema(database);
   std::auto_ptr<sql::Statement> stmt(con->createStatement());
 
-  stmt->execute("DELETE FROM Phonebook WHERE ID='"+idnum+"'");
+  stmt->execute("DELETE FROM Phonebook WHERE First='"+first+"'");
 }
