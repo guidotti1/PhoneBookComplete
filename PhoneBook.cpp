@@ -63,8 +63,7 @@ vector<PhoneEntry> PhoneBook::findByType(string type) {
     res.reset(stmt->getResultSet());
     while (res->next()) {
       PhoneEntry entry(res->getString("First"),res->getString("Last"),
-		       res->getString("Phone"),res->getString("Type"),
-	res->getString("ID"));
+		       res->getString("Phone"),res->getString("Type"));
       list.push_back(entry);
 
     }
