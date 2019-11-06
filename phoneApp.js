@@ -102,9 +102,9 @@ function editEntry(){
 function processDelete(){
     console.log("Attempting to delete an entry");
     $('#searchresults').empty();
-    var id=$(this).attr('ID');
+    var id=$(this).attr('first');
     $.ajax({
-	url: '/cgi-bin/guidotti1_phoneAppComplete.cgi?deleteid='+$('#i.first').text()+'&operation=delete',
+	url: '/cgi-bin/guidotti1_phoneAppComplete.cgi?deleteid='+id+'&operation=delete',
 	dataType: 'text',
 	success: function(){alert("Deleted Record: " +id );},
 	error: function(){alert("Error: Something went wrong");}
