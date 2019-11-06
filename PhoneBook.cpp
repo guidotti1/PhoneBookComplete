@@ -19,7 +19,7 @@ PhoneBook::PhoneBook() {
       res.reset(stmt->getResultSet());
       while (res->next()) {
           PhoneEntry entry(res->getString("First"),res->getString("Last"),
-			   res->getString("Phone"),res->getString("Type");
+			   res->getString("Phone"),res->getString("Type"));
 	  
 	  list.push_back(entry);
 
@@ -42,7 +42,7 @@ vector<PhoneEntry> PhoneBook::findByFirst(string first) {
     res.reset(stmt->getResultSet());
     while (res->next()) {
       PhoneEntry entry(res->getString("First"),res->getString("Last"),
-		       res->getString("Phone"),res->getString("Type");
+		       res->getString("Phone"),res->getString("Type"));
         list.push_back(entry);
 
     }
