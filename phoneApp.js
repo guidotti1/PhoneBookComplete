@@ -57,7 +57,7 @@ function buildTable(list) {
 	var result = '<table class="w3-table-all w3-hoverable" border="2"><tr><th>First</th><th>Last</th><th>Phone</th><th>Type</th><th>Action</th><tr>';
 	var aLen = a.length;
 	for (var i = 1; i < aLen; i+=5) {
-	    result += "<tr><td class='first'>"+a[i]+"</td><td class='last'>"+a[i+1]+"</td><td class='phone'>"+a[i+2]+"</td><td class='type'>"+a[i+3]+"</td>";
+	    result += "<tr><td class='first'>"+a[i]+"</td><td id = "LastName!" class='last'>"+a[i+1]+"</td><td class='phone'>"+a[i+2]+"</td><td class='type'>"+a[i+3]+"</td>";
 	    result += "<td><button type='button' ID='"+a[i+4]+"' class='btn btn-primary btn-sm edit'>Edit</button> ";
 	    result += "<button type='button' ID='"+a[i+4]+"' class='btn btn-primary btn-sm delete'>Delete</button></td></tr>";
 	}
@@ -104,7 +104,7 @@ function processDelete(){
     $('#searchresults').empty();
     var id=$(this).attr('ID');
     $.ajax({
-	url: '/cgi-bin/guidotti1_phoneAppComplete.cgi?deleteid='+$(this).attr('ID')+'&operation=delete',
+	url: '/cgi-bin/guidotti1_phoneAppComplete.cgi?deleteid='+$('#deletefirst').val()+'&operation=delete',
 	dataType: 'text',
 	success: function(){alert("Deleted Record: " +id );},
 	error: function(){alert("Error: Something went wrong");}
