@@ -75,7 +75,7 @@ vector<PhoneEntry> PhoneBook::findByType(string type) {
 
 }
 
-void PhoneBook::addEntry(string first,string last,string phone, string type){
+void PhoneBook::addEntry(string id, string first,string last,string phone, string type){
   sql::Driver* driver = sql::mysql::get_driver_instance();
   std::auto_ptr<sql::Connection> con(driver->connect(url, user, pass));
   con->setSchema(database);
@@ -83,7 +83,7 @@ void PhoneBook::addEntry(string first,string last,string phone, string type){
   if(type != "Friend" && type != "Family" && type!="Business"){
       type="Other";
   }
-  stmt->execute("INSERT INTO Phonebook(First,Last,Phone,Type) VALUES ('"+first+"','"+last+"','"+phone+"','"+type+"')");
+  stmt->execute("INSERT INTO Phonebook(ID, First,Last,Phone,Type) VALUES ('"+id"'+,'"+first+"','"+last+"','"+phone+"','"+type+"')");
 }
 
 
